@@ -1,0 +1,6 @@
+---
+- name: Setup My PC
+  connection: local
+  hosts: localhost
+  roles:
+    - role: apt
