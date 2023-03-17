@@ -8,6 +8,9 @@ sudo apt install ansible git -y
 
 Setup My PC:
 ```bash
+# Set this variable if you get locale encoding to be UTF-8 error
+export LC_ALL="en_US.UTF-8"
+
 ansible-playbook setup.yml -K
 ```
 
