@@ -22,3 +22,5 @@
       - genisoimage
       - virtinst
       - vlc
+      - wireguard-tools
+      - resolvconf
