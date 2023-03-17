@@ -17,3 +17,4 @@
     # - role: zoom
     # - role: openshot
     # - role: obs
+    # - role: minikube
