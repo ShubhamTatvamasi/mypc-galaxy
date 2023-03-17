@@ -1,0 +1,13 @@
+---
+- name: Add OpenShot repo
+  become: yes
+  apt_repository:
+    repo: ppa:openshot.developers/ppa
+
+- name: Install OpenShot
+  become: yes
+  apt:
+    update_cache: yes
+    name:
+      - openshot-qt
+      - python3-openshot
