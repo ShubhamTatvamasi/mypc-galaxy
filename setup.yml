@@ -13,3 +13,4 @@
     # - role: slack
     # - role: kubecolor
     # - role: docker
+    # - role: openlens
