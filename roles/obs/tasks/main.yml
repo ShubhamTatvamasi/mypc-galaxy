@@ -1,0 +1,11 @@
+---
+- name: Add OBS Studio
+  become: yes
+  apt_repository:
+    repo: ppa:obsproject/obs-studio
+
+- name: Install OBS Studio
+  become: yes
+  apt:
+    update_cache: yes
+    name: obs-studio
