@@ -1,0 +1,7 @@
+---
+- name: Download kubebuilder
+  become: yes
+  get_url:
+    url : https://github.com/kubernetes-sigs/kubebuilder/releases/download/v{{ kubebuilder_version }}/kubebuilder_linux_amd64
+    dest: /usr/local/bin/kubebuilder
+    mode: '+x'

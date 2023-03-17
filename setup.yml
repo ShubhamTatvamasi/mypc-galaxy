@@ -19,3 +19,4 @@
     # - role: obs
     # - role: minikube
     # - role: tor_browser # not working
+    # - role: kubebuilder
