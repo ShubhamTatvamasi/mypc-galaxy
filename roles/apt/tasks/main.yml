@@ -1,4 +1,0 @@
----
-- name: Add Sublime Text repository
-  apt_repository:
-    repo: deb https://download.sublimetext.com/ apt/stable/

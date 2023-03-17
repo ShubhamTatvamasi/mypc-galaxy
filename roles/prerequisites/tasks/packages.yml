@@ -1,0 +1,23 @@
+- name: Install prerequisites
+  apt:
+    update_cache: yes
+    name:
+      - apt-transport-https
+      - zsh
+      - vim
+      - python3-pip
+      - htop
+      - ripgrep
+      - iftop
+      - curl
+      - telegram-desktop
+      - bless
+      - virt-manager
+      - virtualbox
+      - virtualbox-guest-utils
+      - qemu-kvm
+      - libvirt-daemon-system
+      - libguestfs-tools
+      - python3-libvirt
+      - genisoimage
+      - virtinst

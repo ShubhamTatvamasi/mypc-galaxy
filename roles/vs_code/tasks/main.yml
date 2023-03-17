@@ -1,0 +1,7 @@
+---
+- import_tasks: add-repo.yml
+  become: yes
+- import_tasks: install-vs-code.yml
+  become: yes
+- import_tasks: cleanup.yml
+  become: yes

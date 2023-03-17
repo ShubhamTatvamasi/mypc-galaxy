@@ -1,0 +1,21 @@
+---
+- name: Download Google Chrome GPG Key
+  get_url:
+    url: https://dl.google.com/linux/linux_signing_key.pub
+    dest: /tmp/linux_signing_key.pub
+
+- name: Add Google Chrome GPG Key
+  command: gpg 
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/google_linux_signing_key.gpg
+    /tmp/linux_signing_key.pub
+
+- name: Delete Google Chrome GPG Key - tmp file
+  file:
+    path: /tmp/linux_signing_key.pub
+    state: absent
+
+- name: Add Google Chrome repository
+  apt_repository:
+    repo: deb https://dl.google.com/linux/chrome/deb/ stable main

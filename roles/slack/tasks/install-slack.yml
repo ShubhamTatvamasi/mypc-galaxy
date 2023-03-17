@@ -1,0 +1,5 @@
+---
+- name: Install Slack Desktop
+  apt:
+    update_cache: yes
+    name: slack-desktop

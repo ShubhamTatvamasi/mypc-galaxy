@@ -1,0 +1,21 @@
+---
+- name: Download VS Code GPG Key
+  get_url:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    dest: /tmp/microsoft.asc
+
+- name: Add VS Code GPG Key
+  command: gpg 
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/packages.microsoft.gpg
+    /tmp/microsoft.asc
+
+- name: Delete VS Code GPG Key - tmp file
+  file:
+    path: /tmp/microsoft.asc
+    state: absent
+
+- name: Add VS Code repository
+  apt_repository:
+    repo: deb https://packages.microsoft.com/repos/code stable main

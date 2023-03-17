@@ -1,0 +1,5 @@
+---
+- name: Delete manually added apt repo file
+  file:
+    path: /etc/apt/sources.list.d/dl_google_com_linux_chrome_deb.list
+    state: absent

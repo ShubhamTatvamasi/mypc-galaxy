@@ -1,0 +1,9 @@
+---
+- name: Install Hashicorp tools
+  apt:
+    update_cache: yes
+    name:
+      - terraform
+      - vault
+      - vagrant
+      - packer

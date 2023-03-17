@@ -1,0 +1,13 @@
+---
+- name: Download kubecolor
+  unarchive:
+    src: https://github.com/hidetatz/kubecolor/releases/download/v{{ kubecolor_version }}/kubecolor_{{ kubecolor_version }}_Linux_x86_64.tar.gz
+    dest: /tmp
+    remote_src: yes
+
+- name: Copy kubecolor to executable path
+  become: yes
+  copy:
+    src: /tmp/kubecolor
+    dest: /usr/local/bin/kubecolor
+    mode: '0755'

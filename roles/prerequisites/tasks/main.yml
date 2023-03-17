@@ -1,0 +1,7 @@
+---
+- import_tasks: packages.yml
+  become: yes
+- import_tasks: yq.yml
+  become: yes
+- import_tasks: golang.yml
+  become: yes

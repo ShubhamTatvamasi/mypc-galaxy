@@ -1,0 +1,21 @@
+---
+- name: Download Slack GPG Key
+  get_url:
+    url: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xd938ec0d038651bd
+    dest: /tmp/slack.gpg
+
+- name: Add Slack GPG Key
+  command: gpg 
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/slack-archive-keyring.gpg
+    /tmp/slack.gpg
+
+- name: Delete Slack GPG Key - tmp file
+  file:
+    path: /tmp/slack.gpg
+    state: absent
+
+- name: Add Slack repository
+  apt_repository:
+    repo: deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main

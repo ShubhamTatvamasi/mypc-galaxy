@@ -1,0 +1,5 @@
+---
+- name: Install Google Chrome
+  apt:
+    update_cache: yes
+    name: google-chrome-stable

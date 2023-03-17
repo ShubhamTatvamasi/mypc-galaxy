@@ -1,0 +1,21 @@
+---
+- name: Download Hashicorp GPG Key
+  get_url:
+    url: https://apt.releases.hashicorp.com/gpg
+    dest: /tmp/hashicorp.gpg
+
+- name: Add Hashicorp GPG Key
+  command: gpg 
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/hashicorp-archive-keyring.gpg
+    /tmp/hashicorp.gpg
+
+- name: Delete Hashicorp GPG Key - tmp file
+  file:
+    path: /tmp/hashicorp.gpg
+    state: absent
+
+- name: Add Hashicorp repository
+  apt_repository:
+    repo: deb https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main

@@ -3,4 +3,13 @@
   connection: local
   hosts: localhost
   roles:
-    - role: apt
+    # - role: prerequisites
+    # - role: sublime_text
+    # - role: vs_code
+    # - role: google_chrome
+    # - role: hashicorp
+    # - role: kubernetes
+    # - role: bitwarden
+    # - role: slack
+    # - role: kubecolor
+    # - role: docker
