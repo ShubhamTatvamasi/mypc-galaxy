@@ -14,3 +14,4 @@
     # - role: kubecolor
     # - role: docker
     # - role: openlens
+    # - role: zoom
