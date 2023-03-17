@@ -25,5 +25,4 @@
       - wireguard-tools
       - resolvconf
       - simplescreenrecorder
-      - torbrowser-launcher
       - tree
