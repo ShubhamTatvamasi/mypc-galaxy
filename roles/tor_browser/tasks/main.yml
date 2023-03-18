@@ -1,39 +1,16 @@
 ---
-# - name: Download Tor Browser
-#   become: yes
-#   unarchive:
-#     src: https://dist.torproject.org/torbrowser/{{ tor_browser_version }}/tor-browser-linux64-{{ tor_browser_version }}_ALL.tar.xz
-#     dest: /opt
-#     remote_src: yes
+- name: Download Tor Browser
+  become: yes
+  unarchive:
+    src: https://dist.torproject.org/torbrowser/{{ tor_browser_version }}/tor-browser-linux64-{{ tor_browser_version }}_ALL.tar.xz
+    dest: /opt
+    remote_src: yes
 
-- name: Update tor browser directory permissions
+- name: Change owner to {{ ansible_user_id }}
   become: yes
   file:
     path: /opt/tor-browser
-    mode: '+rx'
-
-- name: Update tor browser
-  become: yes
-  file:
-    path: /opt/tor-browser/start-tor-browser.desktop
-    mode: '+rx'
-
-
-- name: Update tor browser
-  become: yes
-  file:
-    path: /opt/tor-browser/Browser
-    mode: '+rx'
-
-
-- name: Update tor browser
-  become: yes
-  file:
-    path: /opt/tor-browser/Browser/execdesktop
-    mode: '+rx'
-
-- name: Update tor browser
-  become: yes
-  file:
-    path: /opt/tor-browser/Browser/start-tor-browser
-    mode: '+rx'
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    state: directory
+    recurse: yes
