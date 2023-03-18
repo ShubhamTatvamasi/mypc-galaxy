@@ -3,3 +3,5 @@
   become: yes
 - import_tasks: install-slack.yml
   become: yes
+- import_tasks: cleanup.yml
+  become: yes
