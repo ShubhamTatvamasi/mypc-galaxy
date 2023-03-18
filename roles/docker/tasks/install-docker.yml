@@ -11,9 +11,22 @@
     - gnupg
     - lsb-release
 
-- name: Add an apt signing key for Docker
-  apt_key:
+- name: Download Docker GPG Key
+  get_url:
     url: https://download.docker.com/linux/ubuntu/gpg
+    dest: /tmp/docker.gpg
+
+- name: Add Docker GPG Key
+  command: gpg 
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/docker-archive-keyring.gpg
+    /tmp/docker.gpg
+
+- name: Delete Docker GPG Key - tmp file
+  file:
+    path: /tmp/docker.gpg
+    state: absent
 
 - name: Add apt repository for stable version
   apt_repository:
@@ -26,8 +39,10 @@
   vars:
     packages:
     - docker-ce
-    - docker-ce-cli 
+    - docker-ce-cli
     - containerd.io
+    - docker-buildx-plugin
+    - docker-compose-plugin
 
 - name: Add user to docker group
   ignore_errors: yes
