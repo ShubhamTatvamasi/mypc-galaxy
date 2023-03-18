@@ -11,6 +11,9 @@ Setup My PC:
 # Set this variable if you get locale encoding to be UTF-8 error
 export LC_ALL="en_US.UTF-8"
 
+# Install everything
+sed -i 's/# //g' setup.yml
+
 ansible-playbook setup.yml -K
 ```
 
