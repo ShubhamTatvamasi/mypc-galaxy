@@ -1,5 +1,5 @@
 ---
-- name: Download kubecolor
+- name: Download kubecolor {{ kubecolor_version }}
   unarchive:
     src: https://github.com/hidetatz/kubecolor/releases/download/v{{ kubecolor_version }}/kubecolor_{{ kubecolor_version }}_Linux_x86_64.tar.gz
     dest: /tmp

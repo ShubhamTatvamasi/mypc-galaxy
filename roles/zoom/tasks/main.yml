@@ -1,5 +1,5 @@
 ---
-- name: Install Zoom
+- name: Install Zoom {{ zoom_version }}
   become: yes
   apt:
     deb: https://zoom.us/client/{{ zoom_version }}/zoom_amd64.deb

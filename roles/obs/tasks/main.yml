@@ -1,5 +1,5 @@
 ---
-- name: Add OBS Studio
+- name: Add OBS Studio repo
   become: yes
   apt_repository:
     repo: ppa:obsproject/obs-studio

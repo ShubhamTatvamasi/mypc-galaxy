@@ -1,5 +1,5 @@
 ---
-- name: Download kubebuilder
+- name: Download kubebuilder {{ kubebuilder_version }}
   become: yes
   get_url:
     url : https://github.com/kubernetes-sigs/kubebuilder/releases/download/v{{ kubebuilder_version }}/kubebuilder_linux_amd64

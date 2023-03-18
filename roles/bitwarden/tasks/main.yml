@@ -1,5 +1,5 @@
 ---
-- name: Install Bitwarden
+- name: Install Bitwarden {{ bitwarden_version }}
   become: yes
   apt:
     deb: https://github.com/bitwarden/clients/releases/download/desktop-v{{ bitwarden_version }}/Bitwarden-{{ bitwarden_version }}-amd64.deb

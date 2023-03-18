@@ -1,5 +1,5 @@
 ---
-- name: Download Tor Browser
+- name: Download Tor Browser {{ tor_browser_version }}
   become: yes
   unarchive:
     src: https://dist.torproject.org/torbrowser/{{ tor_browser_version }}/tor-browser-linux64-{{ tor_browser_version }}_ALL.tar.xz

@@ -1,5 +1,5 @@
 ---
-- name: Install OpenLens
+- name: Install OpenLens {{ openlens_version }}
   become: yes
   apt:
     deb: https://github.com/MuhammedKalkan/OpenLens/releases/download/v{{ openlens_version }}/OpenLens-{{ openlens_version }}.amd64.deb
