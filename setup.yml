@@ -13,6 +13,7 @@
     # - role: hashicorp
     # - role: kubernetes
     # - role: kubecolor
+    # - role: helm
     # - role: bitwarden
     # - role: slack
     # - role: docker

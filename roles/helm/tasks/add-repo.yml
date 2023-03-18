@@ -1,0 +1,21 @@
+---
+- name: Download Helm GPG Key
+  get_url:
+    url: https://baltocdn.com/helm/signing.asc
+    dest: /tmp/helm.gpg
+
+- name: Add Helm GPG Key
+  command: gpg 
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/helm-archive-keyring.gpg
+    /tmp/helm.gpg
+
+- name: Delete Helm GPG Key - tmp file
+  file:
+    path: /tmp/helm.gpg
+    state: absent
+
+- name: Add Helm repository
+  apt_repository:
+    repo: deb [arch=amd64] https://baltocdn.com/helm/stable/debian/ all main
