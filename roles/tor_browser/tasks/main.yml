@@ -14,3 +14,9 @@
     group: "{{ ansible_user_id }}"
     state: directory
     recurse: yes
+
+- name: Copy Tor browser desktop icon
+  become: yes
+  copy:
+    src: start-tor-browser.desktop
+    dest: /usr/share/applications/start-tor-browser.desktop
