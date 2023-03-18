@@ -7,3 +7,9 @@
       - vault
       - vagrant
       - packer
+
+- name: Install Vagrant plugins
+  command: vagrant plugin install {{ item }}
+  with_items:
+    - vagrant-vbguest
+    - vagrant-scp
