@@ -15,4 +15,3 @@
   copy:
     src: networks.conf
     dest: /etc/vbox/networks.conf
-
