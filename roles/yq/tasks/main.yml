@@ -1,8 +1,11 @@
+---
 - name: Add YQ repo
+  become: yes
   apt_repository:
     repo: ppa:rmescandon/yq
 
 - name: Install YQ
+  become: yes
   apt:
     update_cache: yes
     name: yq
