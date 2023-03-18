@@ -11,16 +11,17 @@
     # - role: vs_code
     # - role: google_chrome
     # - role: hashicorp
+    # - role: docker
     # - role: kubernetes
+    # - role: kubebuilder
     # - role: kubecolor
+    # - role: minikube
     # - role: helm
+    # - role: rke
     # - role: bitwarden
     # - role: slack
-    # - role: docker
     # - role: openlens
     # - role: zoom
     # - role: openshot
     # - role: obs
-    # - role: minikube
     # - role: tor_browser
-    # - role: kubebuilder

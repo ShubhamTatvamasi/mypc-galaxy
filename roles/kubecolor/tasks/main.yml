@@ -10,4 +10,4 @@
   copy:
     src: /tmp/kubecolor
     dest: /usr/local/bin/kubecolor
-    mode: '0755'
+    mode: '+x'

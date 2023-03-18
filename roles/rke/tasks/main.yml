@@ -1,0 +1,7 @@
+---
+- name: Download rke {{ rke_version }}
+  become: yes
+  get_url:
+    url: https://github.com/rancher/rke/releases/download/v{{ rke_version }}/rke_linux-amd64
+    dest: /usr/local/bin/rke
+    mode: '+x'
