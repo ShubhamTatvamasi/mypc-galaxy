@@ -1,7 +1,7 @@
 ---
 - name: Download kubecolor {{ kubecolor_version }}
   unarchive:
-    src: https://github.com/hidetatz/kubecolor/releases/download/v{{ kubecolor_version }}/kubecolor_{{ kubecolor_version }}_Linux_x86_64.tar.gz
+    src: https://github.com/hidetatz/kubecolor/releases/download/v{{ kubecolor_version }}/kubecolor_{{ kubecolor_version }}_Linux_{{ ansible_architecture }}.tar.gz
     dest: /tmp
     remote_src: yes
 

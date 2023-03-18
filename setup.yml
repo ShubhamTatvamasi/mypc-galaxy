@@ -11,9 +11,9 @@
     # - role: google_chrome
     # - role: hashicorp
     # - role: kubernetes
+    # - role: kubecolor
     # - role: bitwarden
     # - role: slack
-    # - role: kubecolor
     # - role: docker
     # - role: openlens
     # - role: zoom
