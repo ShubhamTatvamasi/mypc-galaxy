@@ -1,0 +1,18 @@
+---
+- name: Install VirtualBox
+  apt:
+    update_cache: yes
+    name:
+      - virtualbox
+      - virtualbox-guest-utils
+
+- name: Create VirtualBox config directory
+  file:
+    path: /etc/vbox
+    state: directory
+
+- name: Copy VirtualBox network config file
+  copy:
+    src: networks.conf
+    dest: /etc/vbox/networks.conf
+

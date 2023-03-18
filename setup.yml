@@ -4,6 +4,7 @@
   hosts: localhost
   roles:
     # - role: prerequisites
+    # - role: virtualization
     # - role: golang
     # - role: yq
     # - role: sublime_text

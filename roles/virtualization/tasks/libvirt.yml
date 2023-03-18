@@ -1,0 +1,18 @@
+---
+- name: Install libvirt
+  apt:
+    update_cache: yes
+    name:
+      - virt-manager
+      - qemu-kvm
+      - libvirt-daemon-system
+      - libguestfs-tools
+      - python3-libvirt
+      - genisoimage
+      - virtinst
+
+- name: Install libvirt pip packages
+  pip:
+    name:
+      - libvirt-python
+      - lxml
