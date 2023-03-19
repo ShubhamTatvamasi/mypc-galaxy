@@ -28,3 +28,12 @@ cd ~/.ssh
 chmod 400 ~/.ssh/id_rsa
 chmod 400 ~/.ssh/id_ed25519
 ```
+
+
+### Setup Git
+
+Update remote origin:
+```bash
+git remote remove origin
+git remote add origin git@github.com:ShubhamTatvamasi/mypc-galaxy.git
+```
