@@ -21,7 +21,7 @@
     # - role: bitwarden
     # - role: slack
     # - role: openlens
-    # - role: zoom
     # - role: openshot
     # - role: obs
+    # - role: zoom
     # - role: tor_browser
