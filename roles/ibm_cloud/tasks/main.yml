@@ -3,3 +3,6 @@
   become: yes
   shell: |
     curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+
+- name: Install IBM Cloud CLI plugins
+  command: ibmcloud plugin install container-service -f
