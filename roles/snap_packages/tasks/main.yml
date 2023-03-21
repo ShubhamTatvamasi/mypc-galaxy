@@ -1,0 +1,7 @@
+---
+- name: Install snap packages
+  become: yes
+  snap:
+    name:
+      - multipass
+      - authy
