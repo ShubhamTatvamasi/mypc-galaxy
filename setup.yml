@@ -24,5 +24,6 @@
     # - role: openlens
     # - role: openshot
     # - role: obs
+    # - role: aws
     # - role: zoom
     # - role: tor_browser
