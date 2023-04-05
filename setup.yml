@@ -4,6 +4,7 @@
   hosts: localhost
   roles:
     # - role: prerequisites
+    # - role: lightdm
     # - role: virtualization
     # - role: snap_packages
     # - role: golang

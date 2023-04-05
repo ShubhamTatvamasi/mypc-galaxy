@@ -1,0 +1,15 @@
+---
+- name: Install LightDM
+  apt:
+    update_cache: yes
+    name: lightdm
+
+- name: Copy lock on wakeup service for lightdm
+  copy:
+    src: lock-on-wakeup.service
+    dest: /etc/systemd/system/lock-on-wakeup.service
+
+- name: Enable lock on wakeup service
+  service:
+    name: lock-on-wakeup
+    enabled: yes
