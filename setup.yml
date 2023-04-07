@@ -10,6 +10,7 @@
     # - role: golang
     # - role: yq
     # - role: sublime_text
+    # - role: discord
     # - role: vs_code
     # - role: google_chrome
     # - role: hashicorp
