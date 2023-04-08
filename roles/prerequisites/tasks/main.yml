@@ -1,5 +1,5 @@
 ---
-- name: Install prerequisites
+- name: Install Pre-Requisites
   become: yes
   apt:
     update_cache: yes
