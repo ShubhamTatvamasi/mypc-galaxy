@@ -1,0 +1,22 @@
+---
+- name: Add Wireshark repo
+  apt_repository:
+    repo: ppa:wireshark-dev/stable
+
+- name: Install Wireshark
+  apt:
+    update_cache: yes
+    name: wireshark
+
+- name: Configure wireshark
+  debconf:
+    name: wireshark-common
+    question: wireshark-common/install-setuid
+    value: true
+    vtype: boolean
+
+- name: Add user to wireshark group
+  ignore_errors: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    group: wireshark
