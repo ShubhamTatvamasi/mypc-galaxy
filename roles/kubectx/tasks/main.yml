@@ -22,5 +22,5 @@
   become: yes
   copy:
     src: /tmp/kubens
-    dest: /usr/local/bin/kubectx
+    dest: /usr/local/bin/kubens
     mode: '+x'
