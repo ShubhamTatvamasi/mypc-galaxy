@@ -48,7 +48,7 @@
   ignore_errors: yes
   user:
     name: "{{ ansible_user_id }}"
-    group: docker
+    groups: docker
 
 - name: Download docker-compose {{ docker_compose_version }}
   get_url:

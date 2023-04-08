@@ -19,4 +19,4 @@
   ignore_errors: yes
   user:
     name: "{{ ansible_user_id }}"
-    group: wireshark
+    groups: wireshark
