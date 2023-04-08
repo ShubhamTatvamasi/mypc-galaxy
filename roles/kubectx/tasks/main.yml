@@ -1,0 +1,26 @@
+---
+- name: Download kubectx {{ kubectx_version }}
+  unarchive:
+    src: https://github.com/ahmetb/kubectx/releases/download/v{{ kubectx_version }}/kubectx_v{{ kubectx_version }}_linux_{{ ansible_architecture }}.tar.gz
+    dest: /tmp
+    remote_src: yes
+
+- name: Download kubens {{ kubectx_version }}
+  unarchive:
+    src: https://github.com/ahmetb/kubectx/releases/download/v{{ kubectx_version }}/kubens_v{{ kubectx_version }}_linux_{{ ansible_architecture }}.tar.gz
+    dest: /tmp
+    remote_src: yes
+
+- name: Copy kubectx to executable path
+  become: yes
+  copy:
+    src: /tmp/kubectx
+    dest: /usr/local/bin/kubectx
+    mode: '+x'
+
+- name: Copy kubens to executable path
+  become: yes
+  copy:
+    src: /tmp/kubens
+    dest: /usr/local/bin/kubectx
+    mode: '+x'
