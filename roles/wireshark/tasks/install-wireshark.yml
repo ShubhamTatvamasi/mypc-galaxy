@@ -12,8 +12,8 @@
   debconf:
     name: wireshark-common
     question: wireshark-common/install-setuid
-    value: true
     vtype: boolean
+    value: true
 
 - name: Add user to wireshark group
   ignore_errors: yes

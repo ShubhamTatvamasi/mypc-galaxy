@@ -4,6 +4,13 @@
     update_cache: yes
     name: lightdm
 
+- name: Configure LightDM
+  debconf:
+    name: gdm3
+    question: shared/default-x-display-manager
+    vtype: string
+    value: lightdm
+
 - name: Copy lock on wakeup service for lightdm
   copy:
     src: lock-on-wakeup.service
