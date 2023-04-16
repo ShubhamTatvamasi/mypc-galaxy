@@ -1,0 +1,5 @@
+---
+- name: Install Anydesk
+  apt:
+    update_cache: yes
+    name: anydesk

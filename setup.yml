@@ -13,6 +13,7 @@
     # - role: sublime_text
     # - role: discord
     # - role: vs_code
+    # - role: anydesk
     # - role: google_chrome
     # - role: hashicorp
     # - role: docker

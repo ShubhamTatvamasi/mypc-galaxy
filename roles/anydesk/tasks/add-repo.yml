@@ -1,0 +1,21 @@
+---
+- name: Download Anydesk GPG Key
+  get_url:
+    url: https://keys.anydesk.com/repos/DEB-GPG-KEY
+    dest: /tmp/anydesk.pub
+
+- name: Add Anydesk GPG Key
+  command: gpg 
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/anydesk.gpg
+    /tmp/anydesk.pub
+
+- name: Delete Anydesk GPG Key - tmp file
+  file:
+    path: /tmp/anydesk.pub
+    state: absent
+
+- name: Add Anydesk repository
+  apt_repository:
+    repo: deb http://deb.anydesk.com/ all main
