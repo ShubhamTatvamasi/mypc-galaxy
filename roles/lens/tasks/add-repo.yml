@@ -1,0 +1,21 @@
+---
+- name: Download Lens GPG Key
+  get_url:
+    url: https://downloads.k8slens.dev/keys/gpg
+    dest: /tmp/lens.gpg
+
+- name: Add Lens GPG Key
+  command: gpg 
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/lens-archive-keyring.gpg
+    /tmp/lens.gpg
+
+- name: Delete Lens GPG Key - tmp file
+  file:
+    path: /tmp/lens.gpg
+    state: absent
+
+- name: Add Lens repository
+  apt_repository:
+    repo: deb https://downloads.k8slens.dev/apt/debian stable main

@@ -1,0 +1,5 @@
+---
+- name: Install Lens
+  apt:
+    update_cache: yes
+    name: lens

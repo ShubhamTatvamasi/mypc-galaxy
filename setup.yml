@@ -26,6 +26,7 @@
     # - role: rke
     # - role: bitwarden
     # - role: slack
+    # - role: lens
     # - role: openlens
     # - role: openshot
     # - role: obs
