@@ -25,6 +25,7 @@
     # - role: helm
     # - role: rke
     # - role: bitwarden
+    # - role: etcher
     # - role: slack
     # - role: lens
     # - role: openlens

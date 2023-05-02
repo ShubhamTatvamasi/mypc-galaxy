@@ -1,0 +1,5 @@
+---
+- name: Install Etcher {{ etcher_version }}
+  become: yes
+  apt:
+    deb: https://github.com/balena-io/etcher/releases/download/v{{ etcher_version }}/balena-etcher_{{ etcher_version }}_amd64.deb
