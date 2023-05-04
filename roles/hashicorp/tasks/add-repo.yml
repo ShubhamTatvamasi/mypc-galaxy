@@ -18,4 +18,4 @@
 
 - name: Add Hashicorp repository
   apt_repository:
-    repo: deb https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main
+    repo: deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main
