@@ -5,7 +5,7 @@
     dest: /tmp/helm.gpg
 
 - name: Add Helm GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/helm-archive-keyring.gpg

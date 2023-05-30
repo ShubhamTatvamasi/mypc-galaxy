@@ -5,7 +5,7 @@
     dest: /tmp/slack.gpg
 
 - name: Add Slack GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/slack-archive-keyring.gpg

@@ -5,7 +5,7 @@
     dest: /tmp/microsoft.asc
 
 - name: Add VS Code GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/packages.microsoft.gpg

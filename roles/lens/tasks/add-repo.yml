@@ -5,7 +5,7 @@
     dest: /tmp/lens.gpg
 
 - name: Add Lens GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/lens-archive-keyring.gpg

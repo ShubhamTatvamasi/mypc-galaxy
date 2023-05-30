@@ -5,7 +5,7 @@
     dest: /tmp/anydesk.pub
 
 - name: Add Anydesk GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/anydesk.gpg

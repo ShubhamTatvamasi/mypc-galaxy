@@ -17,7 +17,7 @@
     dest: /tmp/docker.gpg
 
 - name: Add Docker GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/docker-archive-keyring.gpg

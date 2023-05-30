@@ -5,7 +5,7 @@
     dest: /tmp/linux_signing_key.pub
 
 - name: Add Google Chrome GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/google_linux_signing_key.gpg

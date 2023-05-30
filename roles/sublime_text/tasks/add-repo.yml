@@ -5,7 +5,7 @@
     dest: /tmp/sublimehq-pub.gpg
 
 - name: Add Sublime Text GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/sublimehq-archive.gpg

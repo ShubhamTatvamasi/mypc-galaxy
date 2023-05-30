@@ -5,7 +5,7 @@
     dest: /tmp/hashicorp.gpg
 
 - name: Add Hashicorp GPG Key
-  command: gpg 
+  command: gpg
     --yes
     --dearmor
     --output /etc/apt/trusted.gpg.d/hashicorp-archive-keyring.gpg
