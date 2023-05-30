@@ -15,6 +15,9 @@
     vtype: boolean
     value: true
 
+- name: Activate wireshark configs
+  command: dpkg-reconfigure -f noninteractive wireshark-common
+
 - name: Add user to wireshark group
   ignore_errors: yes
   user:
