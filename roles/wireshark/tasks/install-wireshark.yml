@@ -19,7 +19,6 @@
   command: dpkg-reconfigure -f noninteractive wireshark-common
 
 - name: Add user to wireshark group
-  ignore_errors: yes
   user:
     name: "{{ ansible_user_id }}"
     groups: wireshark
