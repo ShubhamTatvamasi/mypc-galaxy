@@ -6,6 +6,12 @@ sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible git -y
 ```
 
+Clone the repo:
+```bash
+git clone https://github.com/ShubhamTatvamasi/mypc-galaxy.git
+cd mypc-galaxy
+```
+
 Setup My PC:
 ```bash
 # Set this variable if you get locale encoding to be UTF-8 error

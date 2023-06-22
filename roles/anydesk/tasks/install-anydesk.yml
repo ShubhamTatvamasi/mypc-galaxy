@@ -3,3 +3,8 @@
   apt:
     update_cache: yes
     name: anydesk
+
+- name: Disable auto restart
+  service:
+    name: anydesk
+    enabled: no
