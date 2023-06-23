@@ -9,6 +9,7 @@
     # - role: snap_packages
     # - role: golang
     # - role: wireshark
+    # - role: gns3
     # - role: yq
     # - role: sublime_text
     # - role: discord

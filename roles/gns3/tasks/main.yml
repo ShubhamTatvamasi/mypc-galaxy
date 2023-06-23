@@ -1,0 +1,13 @@
+---
+- name: Add GNS3 repo
+  become: yes
+  apt_repository:
+    repo: ppa:gns3/ppa
+
+- name: Install GNS3
+  become: yes
+  apt:
+    update_cache: yes
+    name:
+      - gns3-gui
+      - gns3-server
