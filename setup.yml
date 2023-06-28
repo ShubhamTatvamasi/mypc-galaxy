@@ -16,6 +16,7 @@
     # - role: vs_code
     # - role: anydesk
     # - role: google_chrome
+    # - role: brave
     # - role: hashicorp
     # - role: docker
     # - role: kubernetes

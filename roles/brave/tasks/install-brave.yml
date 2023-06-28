@@ -1,0 +1,5 @@
+---
+- name: Install Brave
+  apt:
+    update_cache: yes
+    name: brave-browser
