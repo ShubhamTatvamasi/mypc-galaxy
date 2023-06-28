@@ -18,4 +18,4 @@
 
 - name: Add Lens repository
   apt_repository:
-    repo: deb https://downloads.k8slens.dev/apt/debian stable main
+    repo: deb [arch=amd64] https://downloads.k8slens.dev/apt/debian stable main
