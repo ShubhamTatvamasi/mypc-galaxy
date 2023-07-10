@@ -45,7 +45,6 @@
     - docker-compose-plugin
 
 - name: Add user to docker group
-  ignore_errors: yes
   user:
     name: "{{ ansible_user_id }}"
     groups: docker
