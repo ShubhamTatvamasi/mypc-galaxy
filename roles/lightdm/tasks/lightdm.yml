@@ -4,17 +4,23 @@
     update_cache: yes
     name: lightdm
 
-# - name: Disable GNOME Display Manager
-#   service:
-#     name: gdm
-#     enabled: no
-
 - name: Configure Light Display Manager
   debconf:
     name: gdm3
     question: shared/default-x-display-manager
     vtype: string
     value: lightdm
+
+- name: Create a symbolic link for Display Manager
+  file:
+    src: /lib/systemd/system/lightdm.service
+    dest: /etc/systemd/system/display-manager.service
+    state: link
+
+# - name: Disable GNOME Display Manager
+#   service:
+#     name: gdm
+#     enabled: no
 
 # - name: Activate LightDM configs
 #   command: dpkg-reconfigure -f noninteractive gdm3
