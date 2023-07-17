@@ -16,13 +16,8 @@
     vtype: string
     value: lightdm
 
-- name: Enable Light Display Manager
-  service:
-    name: lightdm
-    enabled: yes
-
-# - name: Activate LightDM configs
-#   command: dpkg-reconfigure -f noninteractive gdm3
+- name: Activate LightDM configs
+  command: dpkg-reconfigure -f noninteractive gdm3
 
 - name: Copy lock on wakeup service for lightdm
   copy:
