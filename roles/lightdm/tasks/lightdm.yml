@@ -11,6 +11,9 @@
     vtype: string
     value: lightdm
 
+- name: Activate LightDM configs
+  command: dpkg-reconfigure -f noninteractive gdm3
+
 - name: Create a symbolic link for Display Manager
   file:
     src: /lib/systemd/system/lightdm.service
