@@ -1,0 +1,26 @@
+{
+	"added_words":
+	[
+		"Blockchain",
+		"Ethereum",
+		"bitcoin",
+		"cryptocurrency",
+		"blockchain",
+		"metadata",
+		"Shubham",
+		"Kubernetes",
+		"kubernetes"
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"font_size": 18,
+	"gpu_window_buffer": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"scroll_past_end": true,
+	"spell_check": true,
+	"tab_size": 2,
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true,
+}
