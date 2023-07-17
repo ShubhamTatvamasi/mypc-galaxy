@@ -4,6 +4,11 @@
     update_cache: yes
     name: lightdm
 
+- name: Disable GNOME Display Manager
+  service:
+    name: gdm
+    enabled: no
+
 - name: Configure LightDM
   debconf:
     name: gdm3
@@ -11,8 +16,8 @@
     vtype: string
     value: lightdm
 
-- name: Activate LightDM configs
-  command: dpkg-reconfigure -f noninteractive gdm3
+# - name: Activate LightDM configs
+#   command: dpkg-reconfigure -f noninteractive gdm3
 
 - name: Copy lock on wakeup service for lightdm
   copy:
