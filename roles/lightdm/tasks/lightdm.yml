@@ -11,6 +11,9 @@
     vtype: string
     value: lightdm
 
+- name: Activate LightDM configs
+  command: dpkg-reconfigure -f noninteractive gdm3
+
 - name: Create a symbolic link for Display Manager
   file:
     src: /lib/systemd/system/lightdm.service
@@ -21,9 +24,6 @@
 #   service:
 #     name: gdm
 #     enabled: no
-
-# - name: Activate LightDM configs
-#   command: dpkg-reconfigure -f noninteractive gdm3
 
 - name: Copy lock on wakeup service for lightdm
   copy:
