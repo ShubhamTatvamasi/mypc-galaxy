@@ -6,10 +6,16 @@
 
 - name: Create Sublime Text config directory
   file:
-    path: "{{ ansible_user_dir }}/.config/sublime-text/Packages/User"
+    path: "{{ ansible_user_dir }}/.config/sublime-text/{{ item }}"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
     state: directory
+  with_items:
+    - Packages/User
+    - Local
+    - Lib
+    - Log
+    - "Installed Packages"
 
 - name: Copy Sublime Text config
   copy:
