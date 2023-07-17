@@ -1,5 +1,5 @@
 ---
-- name: Install LightDM
+- name: Install Light Display Manager
   apt:
     update_cache: yes
     name: lightdm
@@ -9,12 +9,17 @@
     name: gdm
     enabled: no
 
-- name: Configure LightDM
+- name: Configure Light Display Manager
   debconf:
     name: gdm3
     question: shared/default-x-display-manager
     vtype: string
     value: lightdm
+
+- name: Enable Light Display Manager
+  service:
+    name: lightdm
+    enabled: yes
 
 # - name: Activate LightDM configs
 #   command: dpkg-reconfigure -f noninteractive gdm3
