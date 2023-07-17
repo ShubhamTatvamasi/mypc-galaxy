@@ -4,7 +4,7 @@
     update_cache: yes
     name: sublime-text
 
-- name: Create Sublime Text config directory
+- name: Create Sublime Text config directories
   file:
     path: "{{ ansible_user_dir }}/.config/sublime-text/{{ item }}"
     owner: "{{ ansible_user_id }}"
