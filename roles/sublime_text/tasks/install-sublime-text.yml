@@ -4,7 +4,12 @@
     update_cache: yes
     name: sublime-text
 
-- name: Copy Sublime Text Configs
+- name: Create Sublime Text config directory
+  file:
+    path: "{{ ansible_user_dir }}/.config/sublime-text/Packages/User"
+    state: directory
+
+- name: Copy Sublime Text config
   copy:
     src: Preferences.sublime-settings
     dest: "{{ ansible_user_dir }}/.config/sublime-text/Packages/User/Preferences.sublime-settings"
