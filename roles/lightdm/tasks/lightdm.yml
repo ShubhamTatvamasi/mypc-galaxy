@@ -22,14 +22,6 @@
     content: "/usr/sbin/lightdm"
     dest: "/etc/X11/default-display-manager"
 
-# - name: Activate LightDM configs
-#   command: dpkg-reconfigure -f noninteractive gdm3
-
-# - name: Disable GNOME Display Manager
-#   service:
-#     name: gdm
-#     enabled: no
-
 - name: Copy lock on wakeup service for lightdm
   copy:
     src: lock-on-wakeup.service
