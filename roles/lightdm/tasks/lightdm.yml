@@ -4,12 +4,12 @@
     update_cache: yes
     name: lightdm
 
-# - name: Configure Light Display Manager
-#   debconf:
-#     name: gdm3
-#     question: shared/default-x-display-manager
-#     vtype: string
-#     value: lightdm
+- name: Configure Light Display Manager
+  debconf:
+    name: gdm3
+    question: shared/default-x-display-manager
+    vtype: select
+    value: lightdm
 
 # - name: Activate LightDM configs
 #   command: dpkg-reconfigure -f noninteractive gdm3
