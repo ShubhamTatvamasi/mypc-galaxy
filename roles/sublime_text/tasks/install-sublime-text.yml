@@ -7,6 +7,8 @@
 - name: Create Sublime Text config directory
   file:
     path: "{{ ansible_user_dir }}/.config/sublime-text/Packages/User"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
     state: directory
 
 - name: Copy Sublime Text config
@@ -15,4 +17,4 @@
     dest: "{{ ansible_user_dir }}/.config/sublime-text/Packages/User/Preferences.sublime-settings"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
-    mode: 0644
+    mode: 0664
