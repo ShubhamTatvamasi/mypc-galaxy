@@ -11,7 +11,7 @@
   file:
     path: /opt/tor-browser
     owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
     state: directory
     recurse: yes
 

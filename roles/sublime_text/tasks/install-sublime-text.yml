@@ -8,7 +8,7 @@
   file:
     path: "{{ ansible_user_dir }}/.config/sublime-text/{{ item }}"
     owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
     state: directory
   with_items:
     - Packages/User
@@ -22,5 +22,5 @@
     src: Preferences.sublime-settings
     dest: "{{ ansible_user_dir }}/.config/sublime-text/Packages/User/Preferences.sublime-settings"
     owner: "{{ ansible_user_id }}"
-    group: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_gid }}"
     mode: 0664
