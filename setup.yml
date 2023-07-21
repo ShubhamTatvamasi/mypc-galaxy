@@ -5,7 +5,8 @@
   roles:
     # - role: prerequisites
     # - role: lightdm
-    # - role: virtualization
+    # - role: virt_manager
+    # - role: virtualbox
     # - role: snap_packages
     # - role: golang
     # - role: wireshark

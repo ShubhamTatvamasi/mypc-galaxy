@@ -1,5 +1,0 @@
----
-- import_tasks: libvirt.yml
-  become: yes
-- import_tasks: virtualbox.yml
-  become: yes

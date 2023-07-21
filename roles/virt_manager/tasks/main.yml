@@ -1,5 +1,6 @@
 ---
-- name: Install libvirt
+- name: Install virt-manager
+  become: yes
   apt:
     update_cache: yes
     name:
@@ -8,6 +9,7 @@
       - genisoimage
 
 - name: Install libvirt pip packages
+  become: yes
   pip:
     name:
       - libvirt-python

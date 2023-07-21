@@ -1,0 +1,21 @@
+---
+- name: Download VirtualBox GPG Key
+  get_url:
+    url: https://www.virtualbox.org/download/oracle_vbox_2016.asc
+    dest: /tmp/oracle_vbox_2016.asc
+
+- name: Add VirtualBox GPG Key
+  command: gpg
+    --yes
+    --dearmor
+    --output /etc/apt/trusted.gpg.d/oracle-virtualbox-2016.gpg
+    /tmp/oracle_vbox_2016.asc
+
+- name: Delete VirtualBox GPG Key - tmp file
+  file:
+    path: /tmp/oracle_vbox_2016.asc
+    state: absent
+
+- name: Add VirtualBox repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib
