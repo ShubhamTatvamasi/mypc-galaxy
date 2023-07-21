@@ -15,3 +15,9 @@
   copy:
     src: networks.conf
     dest: /etc/vbox/networks.conf
+
+- name: Add user to vboxusers group
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: vboxusers
+    append: yes
