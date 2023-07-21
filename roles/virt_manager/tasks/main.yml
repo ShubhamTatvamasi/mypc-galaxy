@@ -7,6 +7,7 @@
       - virt-manager
       - libguestfs-tools
       - genisoimage
+      - python3-pip
 
 - name: Install libvirt pip packages
   become: yes
