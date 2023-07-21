@@ -3,7 +3,7 @@
   apt:
     update_cache: yes
     name:
-      - virtualbox-7.0
+      - virtualbox-{{ virtualbox_version }}
       - virtualbox-guest-utils
 
 - name: Create VirtualBox config directory
