@@ -26,6 +26,7 @@
       - rar
       - unrar
       - gnome-tweaks
+      - gnome-shell-extension-manager
       - qbittorrent
       - filezilla
       - firejail
