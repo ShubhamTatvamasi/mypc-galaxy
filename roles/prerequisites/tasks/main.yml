@@ -31,3 +31,10 @@
       - filezilla
       - firejail
       - bat
+
+- name: Create a symbolic link for bat
+  become: yes
+  file:
+    src: /usr/bin/batcat
+    dest: /usr/local/bin/bat
+    state: link
