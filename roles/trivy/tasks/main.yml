@@ -1,0 +1,5 @@
+---
+- name: Install trivy {{ trivy_version }}
+  become: yes
+  apt:
+    deb: https://github.com/aquasecurity/trivy/releases/download/v{{ trivy_version }}/trivy_{{ trivy_version }}_Linux-64bit.deb
