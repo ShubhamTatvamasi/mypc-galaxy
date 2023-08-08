@@ -31,6 +31,7 @@
       - filezilla
       - firejail
       - bat
+      - chromium-browser
 
 - name: Create a symbolic link for bat
   become: yes
