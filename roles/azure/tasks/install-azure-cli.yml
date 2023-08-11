@@ -1,0 +1,5 @@
+---
+- name: Install Azure CLI
+  apt:
+    update_cache: yes
+    name: azure-cli

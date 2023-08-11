@@ -36,6 +36,7 @@
     # - role: openshot
     # - role: obs
     # - role: aws
+    # - role: azure
     # - role: ibm_cloud
     # - role: zoom
     # - role: tor_browser
