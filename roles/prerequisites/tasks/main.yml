@@ -32,6 +32,7 @@
       - firejail
       - bat
       - chromium-browser
+      - fd-find
 
 - name: Create a symbolic link for bat
   become: yes
