@@ -23,6 +23,7 @@
     # - role: kubernetes
     # - role: kubebuilder
     # - role: kubecolor
+    # - role: k9s
     # - role: kubectx
     # - role: minikube
     # - role: helm

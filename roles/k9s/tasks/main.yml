@@ -1,0 +1,13 @@
+---
+- name: Download k9s {{ k9s_version }}
+  unarchive:
+    src: https://github.com/derailed/k9s/releases/download/v{{ k9s_version }}/k9s_Linux_amd64.tar.gz
+    dest: /tmp
+    remote_src: yes
+
+- name: Copy k9s to executable path
+  become: yes
+  copy:
+    src: /tmp/k9s
+    dest: /usr/local/bin/k9s
+    mode: '+x'
