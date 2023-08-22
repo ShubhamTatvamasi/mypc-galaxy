@@ -29,6 +29,7 @@
     # - role: helm
     # - role: rke
     # - role: bitwarden
+    # - role: hugo
     # - role: trivy
     # - role: etcher
     # - role: slack
