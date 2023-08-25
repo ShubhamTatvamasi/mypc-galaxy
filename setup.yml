@@ -26,6 +26,7 @@
     # - role: k9s
     # - role: kubectx
     # - role: minikube
+    # - role: operator-sdk
     # - role: helm
     # - role: rke
     # - role: bitwarden

@@ -1,0 +1,7 @@
+---
+- name: Download Operator SDK
+  become: yes
+  get_url:
+    url : https://github.com/operator-framework/operator-sdk/releases/download/v{{ operator_sdk_version }}/operator-sdk_linux_amd64
+    dest: /usr/local/bin/operator-sdk
+    mode: '+x'
