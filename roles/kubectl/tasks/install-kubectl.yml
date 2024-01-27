@@ -1,5 +1,5 @@
 ---
-- name: Install Kubernetes tools
+- name: Install kubectl
   apt:
     update_cache: yes
     name: kubectl

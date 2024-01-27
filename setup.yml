@@ -20,7 +20,7 @@
     # - role: brave
     # - role: hashicorp
     # - role: docker
-    # - role: kubernetes
+    # - role: kubectl
     # - role: kubebuilder
     # - role: kubecolor
     # - role: k9s
