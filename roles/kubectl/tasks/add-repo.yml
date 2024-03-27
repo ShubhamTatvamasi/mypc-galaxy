@@ -1,21 +1,21 @@
 ---
 - name: Download Kubernetes GPG Key
   get_url:
-    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
-    dest: /tmp/apt-key.gpg
+    url: https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key
+    dest: /tmp/Release.key
 
 - name: Add Kubernetes GPG Key
   command: gpg
     --yes
     --dearmor
-    --output /etc/apt/trusted.gpg.d/kubernetes-archive-keyring.gpg
-    /tmp/apt-key.gpg
+    --output /etc/apt/trusted.gpg.d/kubernetes-apt-keyring.gpg
+    /tmp/Release.key
 
 - name: Delete Kubernetes GPG Key - tmp file
   file:
-    path: /tmp/apt-key.gpg
+    path: /tmp/Release.key
     state: absent
 
 - name: Add Kubernetes repository
   apt_repository:
-    repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
+    repo: deb https://pkgs.k8s.io/core:/stable:/v{{ kubernetes_version }}/deb/ /
