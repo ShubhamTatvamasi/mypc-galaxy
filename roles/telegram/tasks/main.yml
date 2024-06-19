@@ -1,0 +1,11 @@
+---
+- name: Add Telegram repo
+  become: yes
+  apt_repository:
+    repo: ppa:atareao/telegram
+
+- name: Install Telegram
+  become: yes
+  apt:
+    update_cache: yes
+    name: telegram

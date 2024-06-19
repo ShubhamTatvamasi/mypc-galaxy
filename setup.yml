@@ -13,8 +13,9 @@
     # - role: gns3
     # - role: yq
     # - role: sublime_text
-    # - role: discord
     # - role: vs_code
+    # - role: discord
+    # - role: telegram
     # - role: anydesk
     # - role: google_chrome
     # - role: brave

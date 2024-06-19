@@ -13,8 +13,6 @@
       - ripgrep
       - iftop
       - curl
-      - telegram-desktop
-      - bless
       - vlc
       - wireguard-tools
       - resolvconf
