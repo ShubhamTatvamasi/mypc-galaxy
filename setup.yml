@@ -30,6 +30,7 @@
     # - role: operator_sdk
     # - role: helm
     # - role: rke
+    # - role: openstack
     # - role: bitwarden
     # - role: hugo
     # - role: trivy

@@ -1,0 +1,20 @@
+---
+- name: Ensure pipx is installed
+  become: yes
+  apt:
+    name: pipx
+
+- name: Install OpenStack Client
+  community.general.pipx:
+    name: python-openstackclient
+
+- name: Add pipx bin to PATH for zsh
+  lineinfile:
+    path: ~/.zshrc
+    line: 'export PATH="$HOME/.local/bin:$PATH"'
+    create: yes
+
+- name: Apply updated PATH for zsh
+  shell: source ~/.zshrc
+  args:
+    executable: /bin/zsh
