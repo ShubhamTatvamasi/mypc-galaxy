@@ -11,7 +11,7 @@
 
 - name: Install libvirt pip packages
   become: yes
-  pip:
+  community.general.pipx:
     name:
       - libvirt-python
       - lxml

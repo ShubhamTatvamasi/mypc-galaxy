@@ -1,7 +1,7 @@
 ---
 - name: Download Kubernetes GPG Key
   get_url:
-    url: https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key
+    url: https://pkgs.k8s.io/core:/stable:/v{{ kubernetes_version }}/deb/Release.key
     dest: /tmp/Release.key
 
 - name: Add Kubernetes GPG Key
