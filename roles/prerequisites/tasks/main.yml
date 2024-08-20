@@ -31,6 +31,7 @@
       - bat
       - chromium-browser
       - fd-find
+      - ghex
 
 - name: Create a symbolic link for bat
   become: yes
