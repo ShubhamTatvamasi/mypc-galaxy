@@ -2,7 +2,7 @@
 - name: Download Tor Browser {{ tor_browser_version }}
   become: yes
   unarchive:
-    src: https://archive.torproject.org/tor-package-archive/torbrowser/{{ tor_browser_version }}/tor-browser-linux64-{{ tor_browser_version }}_ALL.tar.xz
+    src: https://archive.torproject.org/tor-package-archive/torbrowser/{{ tor_browser_version }}/tor-browser-linux-x86_64-{{ tor_browser_version }}.tar.xz
     dest: /opt
     remote_src: yes
 
