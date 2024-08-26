@@ -8,10 +8,5 @@
       - libguestfs-tools
       - genisoimage
       - python3-pip
-
-- name: Install libvirt pip packages
-  become: yes
-  community.general.pipx:
-    name:
-      - libvirt-python
-      - lxml
+      - libvirt-dev
+      - python3-lxml
