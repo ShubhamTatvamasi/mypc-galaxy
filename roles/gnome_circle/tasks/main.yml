@@ -1,0 +1,5 @@
+---
+- import_tasks: flatpak.yml
+  become: yes
+- import_tasks: install-gnome-circle-apps.yml
+  become: yes
