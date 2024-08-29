@@ -1,7 +1,0 @@
----
-- name: Install Flatpak
-  apt:
-    update_cache: yes
-    name:
-      - flatpak
-      - gnome-software-plugin-flatpak

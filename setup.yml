@@ -4,7 +4,7 @@
   hosts: localhost
   roles:
     # - role: prerequisites
-    # - role: gnome_circle
+    # - role: flatpak
     # - role: lightdm
     # - role: virt_manager
     # - role: virtualbox

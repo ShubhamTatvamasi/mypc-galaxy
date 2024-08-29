@@ -1,0 +1,14 @@
+---
+- name: Install Flatpak
+  become: yes
+  apt:
+    update_cache: yes
+    name:
+      - flatpak
+      - gnome-software-plugin-flatpak
+
+- name: Include Flatpak apps in XDG_DATA_DIRS
+  lineinfile:
+    path: ~/.profile
+    line: 'XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$XDG_DATA_DIRS"'
+    create: yes

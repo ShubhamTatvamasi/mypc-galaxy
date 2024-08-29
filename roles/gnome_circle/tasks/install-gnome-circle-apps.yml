@@ -1,8 +1,0 @@
----
-- name: Install Gnome Circle - Resources
-  flatpak:
-    name: https://dl.flathub.org/repo/appstream/net.nokyan.Resources.flatpakref
-
-- name: Install Gnome Circle - Authenticator
-  flatpak:
-    name: https://dl.flathub.org/repo/appstream/com.belmoussaoui.Authenticator.flatpakref
