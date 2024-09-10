@@ -5,6 +5,7 @@
   roles:
     # - role: prerequisites
     # - role: flatpak
+    # - role: games
     # - role: lightdm
     # - role: virt_manager
     # - role: virtualbox

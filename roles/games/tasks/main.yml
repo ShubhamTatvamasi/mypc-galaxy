@@ -1,0 +1,8 @@
+---
+- name: Install SuperTux and SuperTuxKart
+  become: yes
+  apt:
+    update_cache: yes
+    name:
+      - supertux
+      - supertuxkart
