@@ -32,6 +32,7 @@
       - chromium-browser
       - fd-find
       - ghex
+      - pwgen
 
 - name: Create a symbolic link for bat
   become: yes
