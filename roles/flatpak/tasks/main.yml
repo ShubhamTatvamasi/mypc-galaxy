@@ -7,6 +7,10 @@
       - flatpak
       - gnome-software-plugin-flatpak
 
+- name: Add Flathub remote repository
+  command:
+    cmd: flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 - name: Include Flatpak apps in XDG_DATA_DIRS
   lineinfile:
     path: ~/.profile
